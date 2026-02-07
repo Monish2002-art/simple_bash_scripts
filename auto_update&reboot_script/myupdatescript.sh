@@ -1,12 +1,15 @@
 #!/bin/bash
 
+## read is a builtin function for getting input in bash
+
+
 read -p  "Ready for Update' yes' or 'no': " option
 
-if [ "$option" = "yes" ]; then
-    sudo pacman -Syu
+if [ "$option" = "yes" ]; then       ## In bash $option  $ used to define variable
+    sudo pacman -Syu                ## pacman is used for Arch based distros
     echo "Update Done!!!!"
     echo "Readying to reboot ......"
-    sudo reboot
+    sudo reboot          ## This is command is used for reboot 
 
 elif [ "$option" = "no" ]; then
 
